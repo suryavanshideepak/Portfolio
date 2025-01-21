@@ -19,7 +19,7 @@
     --font-size-h3: 24px;
     --font-size-h4: 20px;
     --font-size-h5: 16px;
-    --font-size-h6: 14px;
+    --font-size-h6: 11px;
   
     /* Line Heights */
     --line-height-body: 1.6;
@@ -306,7 +306,7 @@
 }
 
 .box-01 .inner {
-	background-image: url('https://picsum.photos/1024/768?image=1033');
+	background-image: url('/images/bucketfull.png');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -997,10 +997,10 @@ figure.snip1157 .author h5 span {
         padding-top: 20px;
     }
     .webwebsite_hero_section_userInfo span{
-        font-size: 10px;
+        font-size: var(--font-size-h6);
     }
     .webwebsite_hero_section_userInfo p{
-        font-size: 8px;  
+        font-size: var(--font-size-h6);  
     }
     .container{
         display: grid;
@@ -1017,7 +1017,7 @@ figure.snip1157 .author h5 span {
   @media only screen and (max-width: 480px) {
     .container{
         display: grid;
-        grid-template-columns: auto ;
+        /* grid-template-columns: auto ; */
     }
     .test_box{
         width: 100%;
