@@ -7,6 +7,27 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    /* Base Font Sizes */
+    --font-size-base: 16px; /* Body text */
+    --font-size-small: 14px;
+    --font-size-caption: 12px;
+  
+    /* Heading Font Sizes */
+    --font-size-h1: 40px; /* Main heading */
+    --font-size-h2: 32px;
+    --font-size-h3: 24px;
+    --font-size-h4: 20px;
+    --font-size-h5: 16px;
+    --font-size-h6: 14px;
+  
+    /* Line Heights */
+    --line-height-body: 1.6;
+    --line-height-heading: 1.3;
+  }
+  .body{
+    font-size: var(--font-size-base);
+  }
 /*------------------- Navigation------------------ */
 .navbar-toggle {
     font-size: 24px;
@@ -112,16 +133,16 @@
     width: 70%;
 }
 .website_profile_title h1{
-    font-size: 50px;
+    font-size: var(--font-size-h1);
 }
 .website_profile_title h2{
-    font-size: 50px;
+    font-size: var(--font-size-h2);
 }
 .website_profile_title p{
-    font-size: 25px;
+    font-size: var(--font-size-h3);
     color: black;
     font-weight: 700;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 .website_hero_section img{
     border-radius: 100%;    
@@ -134,13 +155,13 @@
     align-items: center;
 }
 .webwebsite_hero_section_userInfo p{
-    font-size: 20px;
+    font-size: var(--font-size-h2);
     color: white;
     padding: 20px 0px;
 
 }
 .webwebsite_hero_section_userInfo span{
-    font-size: 26px;
+    font-size: var(--font-size-h3);
     color: white;
 }
 .my_experties{
@@ -749,6 +770,9 @@ figure.snip1157 .author h5 span {
   }
   /* ----------------------------------------screen 1024px------------------------------------------------------------------------- */
   @media only screen and (max-width: 1024px) {
+    .website_hero_section{
+        height: 45vh;
+    }
     .website_profile_title h1{
         font-size: 40px;
     }
@@ -944,25 +968,26 @@ figure.snip1157 .author h5 span {
         width: 100%;
     }
     .website_profile_title h1{
-        font-size: 24px;
+        font-size: var(--font-size-h4);
     }
     .website_profile_title h2{
-        font-size: 14px;
+        font-size: var(--font-size-h5);
     }
     .website_navigation_list ul li{
         font-size: 13px;
       }
     .website_hero_section{
-        height: 200vh;
+        height: 80vh;
     }
     .website_profile_title p{
-        font-size: 10px;
+        font-size: var(--font-size-small);
         color: black;
         font-weight: 500;
         padding-top: 12px;
     }
     .website_hero_section_inner{
         flex-direction: column;
+        width: 90%;
     }
     .wesite_profile_image {
         width: 175px;

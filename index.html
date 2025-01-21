@@ -19,11 +19,11 @@
             </div>            
             <div class="website_navigation_list">                
                 <ul class="navbar-menu" id="navbar-menu">
-                    <a href=""><li>Home</li></a>
-                    <li>Work</li>
-                    <li>Service</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <a href="#home"><li>Home</li></a>
+                    <a href="#work"><li>Work</li></a>
+                    <a href="#about"><li>About</li></a>
+                    <a href="#client"><li>Client</li></a>
+                    <a href="#contact"><li>Contact</li></a>
                 </ul>
             </div>
             <div class="navbar-toggle" id="navbar-toggle">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </nav>
-    <section>
+    <section id="home">
         <div class="website_hero_section">
             <div class="website_hero_section_inner">
                 <div class="wesite_profile_image">
@@ -62,7 +62,7 @@
             </div>           
         </div>
     </section>
-    <section>
+    <section >
         <div class="my_experties">
             <div class="my_experties_inner">
                 <div class="heading">
@@ -111,7 +111,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="work">
         <div class="my_work">
             <div class="my_work_inner_class">
                 <div class="heading_my_work">
@@ -187,7 +187,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="about">
         <div class="about_me">
             <div class="about_me_inner">
                 <div class="about_me_heading">
@@ -237,7 +237,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="client">
         <div class="client_testimonial_section">
             <div class="client_testimonial">
                 <div class="client_testimonial_heading">
@@ -285,7 +285,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="contact">
         <div class="footer">
             <div class="inner_footer">
                 <div class="f_heading">
@@ -315,6 +315,15 @@
         document.getElementById('collapse_toggle').addEventListener('click',function(){
 
         })
+        // Add smooth scrolling using JavaScript
+        document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').slice(1); // Remove the '#' from href
+            const targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        });
     </script>
 </body>
 </html>
