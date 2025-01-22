@@ -139,7 +139,52 @@
   .test_box:nth-child(6) {
     animation: fadeInUp 1s ease-out 1.2s forwards;
   }
-  
+  /* Add these CSS styles for animation */
+
+.about_me_inner {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about_me_inner.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about_me_heading h2 {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about_me_heading h2.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills_carousels {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skills_carousels.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.progress {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.progress.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
   
   
 /*------------------- Navigation------------------ */
@@ -222,7 +267,7 @@
     flex-direction: column;
 }
 .website_hero_section_inner{
-    width: 80%;
+    width: 95%;
     /* height: 90vh; */
     display: flex;
     justify-content: center;
@@ -263,7 +308,7 @@
 }
 .webwebsite_hero_section_userInfo{
     padding-top: 50px;
-    width: 80%;
+    width: 95%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -286,7 +331,7 @@
     align-items: center;
 }
 .my_experties_inner{
-    width: 80%;
+    width: 95%;
 }
 .my_experties_inner h2{
     font-size: 40px;
@@ -323,7 +368,7 @@
     align-items: center;
 }
 .my_work_inner_class{
-    width: 80%;
+    width: 95%;
 }
 .heading_my_work h2{
     font-size: 40px;
@@ -488,7 +533,7 @@
 }
 .about_me_inner{
     padding: 50px 0px;
-    width: 80%;
+    width: 95%;
 }
 .about_me_heading h2{
     font-size: 40px;
@@ -621,7 +666,7 @@ progress::-moz-progress-bar {
     align-items: center;
 }
 .client_testimonial{
-    width: 80%;
+    width: 95%;
 }
 .client_testimonial_heading{
     padding: 40px 0px;
@@ -797,7 +842,7 @@ figure.snip1157 .author h5 span {
 }
 .inner_footer{
     padding: 100px 0px;
-    width: 80%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
