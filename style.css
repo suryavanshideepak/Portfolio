@@ -8,26 +8,140 @@
     padding: 0;
 }
 :root {
-    /* Base Font Sizes */
-    --font-size-base: 16px; /* Body text */
+    --font-size-base: 16px;
     --font-size-small: 14px;
     --font-size-caption: 12px;
   
-    /* Heading Font Sizes */
-    --font-size-h1: 40px; /* Main heading */
+    --font-size-h1: 40px; 
     --font-size-h2: 32px;
     --font-size-h3: 24px;
     --font-size-h4: 20px;
     --font-size-h5: 16px;
     --font-size-h6: 11px;
   
-    /* Line Heights */
     --line-height-body: 1.6;
     --line-height-heading: 1.3;
+
+    
   }
   .body{
     font-size: var(--font-size-base);
   }
+
+  /* Animations */
+  .website_hero_section_inner h1 {
+    animation: fadeIn 1s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .website_hero_section_inner h2 {
+    animation: fadeIn 1s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+  
+  .website_hero_section_inner p {
+    animation: fadeIn 1s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .my_experties {
+    opacity: 0; /* Start with hidden content */
+  }
+  
+  .stretgy_direction {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .my_experties.animate .stretgy_direction {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .my_experties.animate {
+    animation: fadeInUp 1s ease-out forwards; 
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .test_box {
+    opacity: 0; /* Start with all boxes hidden */
+    transform: translateY(30px); /* Initial position off-screen */
+    transition: opacity 1s, transform 1s; /* Smooth transition */
+  }
+  
+  /* Add animation for each box when it becomes visible */
+  .test_box.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .test_box {
+    transition: opacity 1s, transform 1s ease-out;
+  }
+  
+  .test_box:nth-child(1) {
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+  }
+  .test_box:nth-child(2) {
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+  }
+  .test_box:nth-child(3) {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+  }
+  .test_box:nth-child(4) {
+    animation: fadeInUp 1s ease-out 0.8s forwards;
+  }
+  .test_box:nth-child(5) {
+    animation: fadeInUp 1s ease-out 1s forwards;
+  }
+  .test_box:nth-child(6) {
+    animation: fadeInUp 1s ease-out 1.2s forwards;
+  }
+  
+  
+  
 /*------------------- Navigation------------------ */
 .navbar-toggle {
     font-size: 24px;
@@ -293,6 +407,7 @@
 	font-weight: 700;
 	margin: 0 0 20px;
 	width: 100%;
+    color:#FF8553
 }
 .test_link {
 	border: 2px solid #fff;
@@ -318,19 +433,19 @@
 	background-size: cover;
 }
 .box-03 .inner {
-	background-image: url('https://picsum.photos/1024/768?image=924');
+	background-image: url('/images/box3.jpeg');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .box-04 .inner {
-	background-image: url('https://picsum.photos/1024/768?image=1073');
+	background-image: url('/images/box4.jpeg');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .box-05 .inner {
-	background-image: url('https://picsum.photos/1024/768?image=1032');
+	background-image: url('/images/box5.jpeg');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -735,6 +850,10 @@ figure.snip1157 .author h5 span {
     background-color: #FF8553;
     border-radius: 30px;
     cursor: pointer;
+}
+.lets_talk_button a{
+    text-decoration: none;
+    color: black;
 }
 #toggle-nav {
     display: block; /* Show toggle button */
