@@ -170,6 +170,9 @@
 }
 
 .skills_carousels.animate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 1;
     transform: translateY(0);
 }
@@ -764,7 +767,7 @@ figure.snip1157 .author h5 span {
 }
 .slider_container {
     position: relative;
-    width: 60%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;

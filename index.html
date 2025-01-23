@@ -437,20 +437,29 @@
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-            const projectBoxes = document.querySelectorAll('.test_box');
+            const projectBoxes1 = document.querySelectorAll('.box01');
+            const projectBoxes2 = document.querySelectorAll('.box02');
+            const projectBoxes3 = document.querySelectorAll('.box03');
+            const projectBoxes4 = document.querySelectorAll('.box04');
+            const projectBoxes5 = document.querySelectorAll('.box05');
+            const projectBoxes6 = document.querySelectorAll('.box06');
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Loop through the project boxes to add the 'animate' class to individual elements
                         entry.target.classList.add('animate');
                         observer.unobserve(entry.target);
                     }
                 });
             }, {
-                threshold: 0.2
+                threshold: 0.5
             });
-
+            observer.observe(projectBoxes1);
+            observer.observe(projectBoxes2);
+            observer.observe(projectBoxes3);
+            observer.observe(projectBoxes4);
+            observer.observe(projectBoxes5);
+            observer.observe(projectBoxes6);
             projectBoxes.forEach((box) => {
                 observer.observe(box);
             });
@@ -465,16 +474,14 @@
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Add the 'animate' class when the element is in view
                         entry.target.classList.add('animate');
-                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                        observer.unobserve(entry.target); 
                     }
                 });
             }, {
-                threshold: 0.2 // Adjust as needed for when the element is considered "in view"
+                threshold: 0.5
             });
 
-            // Observe each target for animation
             observer.observe(aboutHeading);
             observer.observe(aboutContent);
             observer.observe(skillsCarousel);
