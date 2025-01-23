@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="my portfolio related to technical aspects">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,19 +27,19 @@
             </div>
             <div class="website_navigation_list">
                 <ul class="navbar-menu" id="navbar-menu">
-                    <a href="#home">
+                    <a href="#home" aria-label="home">
                         <li>Home</li>
                     </a>
-                    <a href="#work">
+                    <a href="#work" aria-label="work">
                         <li>Work</li>
                     </a>
-                    <a href="#about">
+                    <a href="#about" aria-label="about">
                         <li>About</li>
                     </a>
-                    <a href="#client">
+                    <a href="#client" aria-label="client">
                         <li>Client</li>
                     </a>
-                    <a href="#contact">
+                    <a href="#contact" aria-label="contact">
                         <li>Contact</li>
                     </a>
                 </ul>
@@ -87,7 +88,7 @@
                 </div>
                 <div class="my_experties_brief_details">
                     <div class="stretgy_direction">
-                        <img src="./images/services1.png" />
+                        <img src="./images/services1.png" alt="service1-image"/>
                         <h5>
                             <a href="#">Responsive Design and Development</a>
                         </h5>
@@ -97,7 +98,7 @@
                         </p>
                     </div>
                     <div class="stretgy_direction">
-                        <img src="./images/services2.png" />
+                        <img src="./images/services2.png" alt="service2-image"/>
                         <h5>
                             <a href="#">Modern Frontend Technologies</a>
                         </h5>
@@ -109,7 +110,7 @@
                 </div>
                 <div class="my_experties_brief_details">
                     <div class="stretgy_direction">
-                        <img src="./images/services3.png" />
+                        <img src="./images/services3.png" alt="service3-image"/>
                         <h5>
                             <a href="#">Cross-Browser Compatibility</a>
                         </h5>
@@ -119,7 +120,7 @@
                         </p>
                     </div>
                     <div class="stretgy_direction">
-                        <img src="./images/services4.png" />
+                        <img src="./images/services4.png" alt="service4-image"/>
                         <h5>
                             <a href="#">Performance Optimization</a>
                         </h5>
@@ -372,7 +373,7 @@
                 link.click();
                 document.body.removeChild(link);
             } catch (error) {
-                console.error("Error downloading the file:", error);
+                
             }
         });
         document.addEventListener("DOMContentLoaded", () => {
